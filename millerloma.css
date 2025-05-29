@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #000000;
+    color: #000000;
+}
+h2 {
+    font-size: 20px;
+    color: #000000;
+    color: #000000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.párrafo {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('opción.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4; /* Ajusta este valor a gusto */
+    z-index: -1;
+}
+nav {
+    height: 10rem;
+    position: fixed;
+    top: 0;
+    /* Valor para definir la posición */
+    width: 100%;
+    /* Valor para definir el largo del encabezado */
+    z-index: 1000;
+    flex-wrap: wrap;
+    display: flex;
+    height: 10rem;
+    justify-content: center;
+    background: linear-gradient(to right, rgb(137, 1, 1) 0%, rgb(255, 124, 124) 20%, #ffffff 40% ,#ffffff 60%, rgb(88, 197, 15) 80%, #133701 100%);
+
+}
+.prueba {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Para que se acomoden bien en pantallas pequeñas */
+    gap: 10px; /* Añade un pequeño espacio entre botones */
+    align-items: center;
+    gap: 10px;
+  padding: 1rem;
+}
+.imagen {
+    width: 40rem;
+    height: 40rem;
+    object-fit: contain;
+    justify-content:end;
+    display: flex;
+}
+footer {  
+    position: fixed;
+    bottom: 0;
+}
+/* Margen superior de la botonera de la navbar */
+/* Fondo */
+html {
+    min-height: 100dvh;
+    text-align: center;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(243, 248, 234);
+    /* background: linear-gradient(to right, #2c0101 0%, rgb(137, 1, 1) 10%, rgb(255, 124, 124) 20%, #ccc 60%, rgb(88, 197, 15) 80%,#133701 100%); */
+    /* Sirve para modificar el fondo. */
+    background-attachment: fixed;
+    color: #333;
+}
+/* Disposición de las tarjetas */
+.pricing-table {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 12rem; /* espacio para el navbar fijo */
+    padding-left: 1rem;
+    padding-right: 1rem;
+/* Tamaño de los botones */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+/* Para modificar vista de las tarjetas */
+.pricing-card {
+    /* Para la carta */
+    background: rgb(243, 224, 183);
+    padding: 2rem;
+    border-radius: 50px;
+    box-shadow: 15px 15px 40px rgb(73, 73, 74);
+    /* -1px -1px 20px rgba(157, 0, 255, 0.829); */
+        /* para la sombra */
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  margin: 2rem auto;
+  /* valor para definir el espacio entre las tarjetas */
+  max-width: 44rem;
+  text-align: start;
+}
+/* movimiento de las tarjetas */
+.pricing-card:hover{
+    transform: translateY(-10px);
+}
+.botonera:hover{
+    transform: translateY(-5px);
+}
+/* No sé para qué es */
+.pricing-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+/* para acomodar el título */
+.plan-name { 
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 10px;
+    color:  rgb(217, 255, 0);
+    margin-bottom: 20px;
+    font-weight: 600;
+    background: linear-gradient(to right, rgb(137, 1, 1) 0%, rgb(255, 124, 124) 20%, #ffffff 40% ,#ffffff 60%, rgb(88, 197, 15) 80%,#133701 100%);
+    font-family: sans-serif;
+    text-shadow: 0 1px 0 #000000, 0 2px 0 #000000, 0 3px 0 #000000, 0 4px 0 #000000, 0 5px 0 #000000, 6px 0 transparent, 7px 0 transparent, 8px 0 transparent, 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+/* No entendí bien para qué es. Creo que es para darles un margen entre los botones.*/
+.features {
+    list-style: none;
+    margin-bottom: 40px;
+}
+.features li:last-child {
+    border-bottom: none;
+}
+/* Para botón mágico */
+.cta-button {
+    display: block;
+    width: 35rem;
+    /* Tamaño del botón */
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3rem;
+    font-weight: 600;
+    font-size: 3rem;
+    font-family: sans-serif;
+    transition: transform 0.3s ease;
+    list-style: none;
+    margin-bottom: 40px;
+    background-color: #3c3c3c;
+}
+.botonera {
+    color: #000000;
+    display: flex; 
+/* Tamaño de los botones */
+    width: auto;
+    /* Tamaño del botón */
+    padding: 0.7rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    /* Por algún motivo esta propiedad quita las líneas molestas entre las letras */
+    border-radius: 3rem;
+    font-weight: 1;
+    /* Grosor de la letra (por algún motivo ya no define la letra) */
+    font-size: 1.2rem;
+    /* Tamaño de la letra */
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: transform 0.3s ease;
+    list-style: none;
+    margin-bottom: 40px;
+    background-color: #d6d6d1;
+    max-width: 13rem;
+    box-shadow: 15px 15px 40px rgb(73, 73, 74);
+    margin: auto;
+    font-weight: bold;
+}
+/* movimiento del botón */
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+span {
+    color:  rgb(217, 255, 0);
+    text-align: center;
+    position: relative;
+    font-size: 3rem;
+    font-family: sans-serif;
+    display: inline-block;
+    text-shadow: 0 1px 0 #09012d, 0 2px 0 #09012d, 0 3px 0 #09012d, 0 4px 0 #09012d, 0 5px 0 #09012d, 6px 0 transparent, 7px 0 transparent, 8px 0 transparent, 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.5);
+    animation: bounce 0.4s ease infinite alternate;
+}
+span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+span:nth-child(6) {
+    animation-delay: 1s;
+}
+span:nth-child(7) {
+    animation-delay: 1.2s;
+}
+span:nth-child(8) {
+    animation-delay: 1.4s;
+}
+span:nth-child(9) {
+    animation-delay: 1.6s;
+}
+span:nth-child(10) {
+    animation-delay: 1.8s;
+}
+span:nth-child(11) {
+    animation-delay: 2s;
+}
+@keyframes bounce {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-20px);
+        text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 6px 0 transparent, 7px 0 transparent, 8px 0 transparent, 9px 0 transparent, 0 60px 30px rgba(0, 0, 0, 0.5);
+    }
+}
+.sticky-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  text-align:left;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.sticky-footer img {
+  max-width: 100px;
+  height: auto;
+}
+@media (max-width: 768px) {
+    .pricing-table {
+    flex-direction: column;
+    align-items: center;
+    grid-template-columns: 1fr;
+     width: 80%;
+    }}
