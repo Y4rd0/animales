@@ -45,9 +45,9 @@ body::before {
     z-index: -1;
 }
 nav {
-    box-shadow: 15px 15px 40px rgb(73, 73, 74);
     height: 10rem;
     position: fixed;
+    box-shadow: 15px 15px 40px rgb(73, 73, 74);
     top: 0;
     /* Valor para definir la posición */
     width: 100%;
